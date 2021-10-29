@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /***********Some variables****************************/
 /***********color-variables**************/
 :root{
@@ -281,3 +282,288 @@ p{
     }
 } 
 
+=======
+/***********Some variables****************************/
+/***********color-variables**************/
+:root{
+  --color-1:black;
+  --color-2:white;
+  --color-3:lightgrey;
+  --bg-color-1:linear-gradient(#FF512F,#F09819);
+}
+/*************SOME-COMMON-PART-OF-PAGE*******************/
+a{
+    text-decoration:none;
+}
+ul{
+    list-style:none;
+  }
+
+/************************STARTING-OF-FORM-CONTAINER ********************************************************/
+
+/**************BODY-OF-PAGE**********************/
+body{
+    margin: 0;
+   background-color: var(--color-1);
+}
+
+/*********CONTAINER-OF-TASK-APP***********/
+#container{
+    width: 80%;
+    min-width: 400px;
+    min-height: 80vh;
+    text-align: center;
+    font-family: sans-serif;
+    margin: auto;
+    background: linear-gradient(to right, #870000, #190a05); 
+}
+
+/****************HEADER-OF-TOPIC********************/
+header h1{
+    margin: 0;
+    font-size: 8vh;
+    font-weight: bolder;
+    font-family: Audrey;
+    background: -webkit-linear-gradient(90deg, rgba(255, 251, 5, 0.959) 0%, rgb(231, 205, 56) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+} 
+header h2{
+      text-align: center;
+      color: rgb(109, 107, 5);
+      margin-top: -1.5vh;
+      font-size:3.3vh;
+      font-weight: 900;
+}
+
+/***********************STARTING-OF-FORM-CONTAINER-SECTION**************************************************/
+
+/********FOFRM-SIZE-DESGIN*******/
+#form-container{
+    font-family: sans-serif;
+    margin: 0px 30px;
+    padding: 1vh 0;
+    border: 5px solid rgb(3, 45, 73);
+    border-radius: 10px;
+    background: linear-gradient(to right, #0d2047, #141e30, #243b55); 
+}
+/*******TASK-DESCRIPITION**********/
+#task-desc{
+    height: 5vh;
+    width: 98%;
+    font-weight: bold;
+    font-size: 2vh;
+}
+/*****HEADING-OF-FORM*********/
+h3{
+    color: var(--color-2);
+    font-size: 3vh;
+    font-weight: 900;
+    margin-left: 0;
+}
+/*******FORM-DETAILS-THREE-ITEMS***/
+#threeItem{
+    display: flex;
+	flex-direction:row;
+    position: relative;
+	flex-wrap: wrap;
+    justify-content:space-around;
+}
+/*********SIZE-OF-ITEMS-ICON***********/
+#threeItem i{  
+    font-size: 6vh;
+    margin-top: 1vh;
+}
+/*****SIZE-OF=GENRE-PRIORITY-DATE******/
+.contain-genre,.contain-priority,.contain-date{
+    height: 110px;/*12vh*/
+    width:22vw ;/*420px*/
+    color: var(--color-2);
+    z-index: 10;
+    position: relative;
+}
+/**********DATE-PICKER*****************/
+select,#my_date_picker{
+    height: 50px;/*5vh*/
+    width: 21vw;
+    background-color: var(--color-2);
+    font-family: 'Lato', 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 2vh; 
+}
+/******SUBMIT-BUTTTON-OF=TASK*******/
+button{
+    height: 65px;
+    width: 180px;
+    color: var(--color-2);
+    font-size: 3vh;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, hsla(92, 58%, 19%, 1) 0%, hsla(126, 92%, 49%, 1) 100%);
+    border: none;
+    border-radius: 5px;
+    margin-top: 2vh;
+}
+button:hover{    /***BUTTON-HOVER****/
+    background:lightgrey;
+    color: green;
+    transform:scale(.8);
+}
+.fa-plus-square{  /***BUTTON-ICON-SIZE**/
+    font-size: 3.5vh;
+}
+
+/***********************END-OF-FORM-SECTION*************************************************************/
+
+/***********************STARTING-OF-TASK-LIST-DISPLAY-STRUCTURE-SECTION*****************************************/
+
+/**********LIST-STYLE*********/
+#list ul{
+    padding: 0;
+    list-style: none;
+}
+/****LIST-OF-TASK-FRAME*****/
+.task-list{
+    padding: 5px 10px;
+    margin: 15px  30px 15px -10px;
+    border: 5px solid white;
+    background: linear-gradient(to right, #f7971e, #ffd200);
+    border-radius: 10px;
+    color: #f5f3f4;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    display: flex;
+    min-width: 300px;
+}
+/****TASK-DETAILS-LIST***/
+.details{ 
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    width: 83%;
+}
+/******TASK-LIST-HOVER****/
+.task-list:hover {
+    color: rgb(0, 179, 54);
+    transform: scale(1.03);
+}
+
+/*****.task-list P ******COMMON-PART***/
+p{
+    margin: 5px 0;
+}
+/*******TASK-CHECKED-BOX***********/
+#t-check .task1{
+    margin-top: 2vh;
+    height: 3vh;
+    width: 4vw;
+}
+/***DISPLAY-MESSAGE-WHEN-WE-CLICK-IN-CHECKED-BOX***/
+.details  .checktask{
+    width: 68vw;
+    height: 70px;
+    margin-left: 3.6vw;
+    opacity: .8;
+    position: absolute;
+    font-size: 6vh;
+    color: red;
+    text-align: justify;
+}
+/**DISPLAY-TASK-DESCRIPTION-DETAILS*****/
+#t-detail{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    text-align: left;
+    width: 33vw;/*55%*/
+    margin-left: 0;
+}
+/**DISPLAY-TASK-GENRE-DETAILS*****/
+#t-genre{
+    background: linear-gradient(to right, #000046, #1cb5e0);
+    text-align: center;
+    width: 8vw;/* 16%; */
+    margin:.5vh;
+    padding-top: 1.2vh;
+    min-width: 100px;
+    max-height: 50px;
+}
+/**DISPLAY-TASK-PRIORITY-DETAILS*****/
+#t-priority{
+    background: linear-gradient(to right, #ff0099, #493240);
+    text-align: center;
+    width: 7vw;
+    margin:.5vh;
+    padding-top: 1.2vh;
+    min-width: 74px;
+    max-height: 50px;
+}
+/*******DELETE-BUTTON*****************/
+.delete-list{
+    background: linear-gradient(90deg, hsla(5, 93%, 28%, 1) 0%, hsla(0, 97%, 49%, 1) 100%);
+    text-align: center;
+    width: 138px;
+    margin:0.5vh;
+    padding-top: 1.3vh;
+    border-radius: 5px;
+    max-height: 50px;
+    z-index: 5;
+}
+/*******DELETE-BUTTON-ICON*********/
+.delete-list i{
+    color: var(--color-2);
+}
+/*******DELETE-BUTTON-HOVER******/
+.delete-list:hover{
+    background:lightgrey;
+    color: red;
+    transform:scale(.9);
+}
+/***********************END-OF-TASK-LIST-DISPLAY-STRUCTURE-SECTION**********************/
+
+/***********************END-OF=TASK-CONTAINER-SECTION***********************************************************/
+
+
+
+/**********************RESPONSIVE--PAGE-************************************/
+
+@media only screen and (max-width: 1000px) {
+    /**HEDING-OF-PAGE***/
+   header h1{
+        font-size: 3.5vh;
+    }
+   header h2{
+        font-size: 2vh;
+    }
+    /***TASK-DETAILS***/
+    #t-detail{
+            width: 90%;
+    }
+    /****TASK-CATEGOTY****/
+    #t-genre,#t-priority{
+            margin-left: 4vw;
+    }
+    /****CHECKBOX******/
+    .details .checktask{
+            width: 65vw;
+            font-size: 5vh;
+    }
+}
+
+@media only screen and (max-width: 725px) {
+    /****CHECKBOX******/
+    .details .checktask{
+        width:63vw;
+        max-width: 63vw;
+        height:8vh;
+        font-size: 4vh;
+        margin-left: 4.8vw; 
+    }
+    /****TASK-CATEGOTY****/
+    #t-detail,#t-genre,#t-priority{
+            margin-left: 1vw;
+            margin-top: 1vh;
+    }
+} 
+
+>>>>>>> 5f8bace4117d6eaf3586df45b4060ac9a082a6a7
