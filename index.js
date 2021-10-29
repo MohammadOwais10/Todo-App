@@ -1,15 +1,29 @@
 const express=require('express');
-const app=express();
-const port=8000;
+const port=3000;
 
-/*
+const app=express();
+
+/*connecting mongoDB using mongoose*/
+const db=require('./config/mongoose');
+
+/*find and delete*/
+const { findByIdAndDelete } = require('./models/list');
+
+/*creating the DB schema*/
+const todoList=require('./models/list');
+
+app.set('views', './views');
+//set up the view engine
+app.set('view engine','ejs');
+
+app.use(express.urlencoded());
+app.use(express.static('assets'));
+
+
 //use express router
 app.use('/',require('./routes'));
 
-//set up the view engine
-app.set('view engine','ejs');
-app.set('views','./views');
-*/
+
 app.listen(port,function(err){
     if(err){
         //console.log('Erroe:',err);  OR below

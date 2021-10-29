@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Title-of-project-->
+        <title>
+            <%= locals.title%>
+        </title>
+        <!------------Icons-fontawesome------------>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <!------------CSS-File-Stylesheet--------------->
+        <link rel="stylesheet" href="/css/home.css">
+       <!-- Using-the-jQuery-UI-For-Date-Input-Calender-->
+       <link href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css' rel='stylesheet'>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    </head>
+   
+<!-----------------START-OF-BODY----------------------------------------------------------------------->     
+    <body >
+
+<!-----------------STARTING-OF-APP-LIST-CONTAINER--------------------------------------------->
+    <div id="container">
+      
+    <!--THIS-IS-FOR-HEADING-OF-PAGE-->
+    <header id="page-heading">
+       <h1 >
+        <i class="fas fa-pen-nib"></i>
+        Task Catalog APP  <!--Task Catalog-->
+            <i class="fas fa-clipboard-list"></i>
+        </h1>
+            <h2 >Our Short-Term Memory</h2>
+    </header>
+ 
+<!--------------------Starting-Form-Container---------------------------------------------->
+  
+<section id="form-container">
+    <form id="todo-form" action="/create-list" method="POST" autocomplete="off">
+        <h3>Add Details About Task</h3>
+        <input type="text" name="name" id="task-desc" placeholder="Task Description" required>
+
+       <!--Group-of-Three-item----->
+        <div id="threeItem">
+         <!-----------Genre-Category-Section--------->
+        <div class="contain-genre">
+        <i class="fas fa-list-alt"></i>
+        <select name="genre" class="genre-category" required>
+            <option value="" selected="true" disabled="disabled" required>Choose a Genre</option>
+            <option value="">Please select</option>
+            <option value="HOME">&#xf1ad; Home</option>
+            <option value="BILL">&#xf3d1; Money Bill</option>
+            <option value="REGISTER">&#xf25d; Register</option>
+            <option value="CODING">&#xf1c9; Coding</option>
+            <option value="OTHER">&#xf02e; Other</option>
+            </select>
+        </div>
+        <!------------Priority-Category-Section------->
+        <div class="contain-priority">
+            <i class="fas fa-eye"></i>
+        <select name="priority" class="priority-category" required>
+            <option value="" selected="true" disabled="disabled">Priority</option>
+            <option value="HIGH">&#xf005; High</option>
+            <option value="LOW">&#xf089; Low</option>
+            </select>
+        </div>
+        <!----------Date-Section------------------->
+        <div class="contain-date">
+        <i class="fas fa-calendar-alt"></i>
+        <input type="text" id="my_date_picker" placeholder="Due Date" name="date" class="date-set" required>
+       </div> 
+
+       </div><!--End-Of-Three-items------>
+       <!-------Button-Submit-------------->
+       <button type="submit"  ><i class="fas fa-plus-square"></i>Add Task</button>
+    </form>
+    </section>
+<!----------------------End-Of-Form-Container ------------------------------------------->
+
+
+<!---------------------STARTING-OF-TASK-LIST-DISPLAY-STRUCTURE-------------------------------------->
+    <div > 
+       <ul >
+        <% for(let i of allLists){%>                  
+         <li class="task-list" >
+             
+            <div class="details">
+
+        <!----------This-Part-for-Checked-box-------------->
+          <span id="t-check">   
+            <input type="checkbox" class="task1" data-id="task<%- i._id %>" class="custom-checkbox" onclick="myFunction()">
+        </span>
+             <span id="task<%- i._id %>"   style="display:none" class="checktask">Task Completed!</span>
+         
+        <!----------This-Part-for-Details-box-------------->
+          <span id="t-detail">
+            <p><%= i.name %></p>
+          <span id="t-date"><!----This-Part-for-Date------>
+            <i class="fas fa-calendar-alt"></i>
+             <span><%= i.date %></span>
+             </span>
+          </span>
+        <!----------This-Part-for-Genere-Structure--------------->
+          <span id="t-genre" class="i.genre">
+             <p><%= i.genre %></p>
+              </span>
+        <!----------This-Part-for-Priority-Structure--------------->
+          <span id="t-priority">
+             <p><%= i.priority %></p>
+            </span>
+            </div> <!--End-of-list-details-->
+        <!---------This-Part-for-Delete-Rutton--------------->
+          <div class="delete-list">
+            <a href="/delete-list/?id=<%=i._id%>"  onclick="return confirm('Are you sure you want to delete this task?');">
+              <i class="fas fa-trash-alt">Remove</i>
+                 </a>
+
+            </div>       
+                    </li>
+                    <%}%>
+            </ul>
+        </div>
+<!---------------END-OF-TASK-LIST-DISPLAY-STRUCTURE--------------------------------->   
+
+
+<!---------Date-Picker-Script-From-jQuery------------------>
+    <script>
+        $(document).ready(function ()
+        {
+            $(function ()
+            {
+                $("#my_date_picker").datepicker({
+                    dateFormat: "DD dd-mm-yy"
+                });
+            });
+        }) 
+    </script>
+<!--------END-OF-Date-Picker-Script------------------------->
+
+<!----------Script-Of-JavaScript--------------------------->
+<script type="text/javascript" src="/js/home.js"></script>
+
+
+</div>
+<!---------------------END-OF-APP-LIST-CONTAINER--------------------------------------->
+ </body>
+ <!------------END-OF-BODY----------------------------------------------------------------->
+</html>
+<!-- -----------------END-OF-HTML-PAGE---------------------------------------------------------->
