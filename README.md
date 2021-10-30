@@ -29,19 +29,13 @@
       
 ## UI Design Screenshot
   *  Beginning Of APP
-<img src="ui-git-desk-form-lag.png">
+![ui-img-ss](/ui-img-ss/ui-git-desk-form-lag.PNG)
   
   *  Checked Task Message
-<img src="ui-git-desk-checked.PNG">
+![ui-img-ss](/ui-img-ss/ui-git-desk-checked-1.png)
   
   *  Add Task Lists
-<img src="ui-git-desk-lag.PNG">
+![ui-img-ss](/ui-img-ss/ui-git-desk-lag.PNG)
 
   *  Responsive UI Design
-<img src="ui-git-pad-2-lag.png">
-
-![alt text](ui-git-pad-2-lag.png)
-![ui-img-ss]ui-git-pad-2-lag.png)
-
-![ui-img-ss](/ui-img-ss/ui-git-desk-checked.PNG)
-Format: ![Alt Text](url)
+![ui-img-ss](/ui-img-ss/ui-git-pad-2-lag.png)
