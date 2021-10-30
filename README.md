@@ -28,11 +28,14 @@
        - Details About List
       
 ## UI Design Screenshot
-  -  Beginning Of APP
+  *  Beginning Of APP
 <img src="ui-git-desk-form-lag.PNG">
-  -  Checked Task Message
+  
+  *  Checked Task Message
 <img src="ui-git-desk-checked-1.PNG">
-  -  Add Task Lists
+  
+  *  Add Task Lists
 <img src="ui-git-desk-lag.PNG">
-  -  Responsive UI Design
-<img src="ui-git-pad-2-lag.PNG"> 
+
+  *  Responsive UI Design
+<img src="ui-git-pad-2-lag.PNG">
