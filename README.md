@@ -11,7 +11,7 @@
 5.Open your preferred web browser and go to https://localhost:3000.
 
 ## Functions/Features
-     - Add Task
+   - Add Task
           - Descrition
           - Category
           - Priority
