@@ -12,19 +12,19 @@
 
 ## Functions/Features
    - Add Task
-          - Descrition
-          - Category
-          - Priority
-          - Date
+      - Descrition
+      - Category
+      - Priority
+      - Date
+   
+   - Delete Task
+      - Ask Confirmation Notification
 
-    - Delete Task
-         - Ask Confirmation Notification
+   - Checked Task
+       - Show Message Task Done
 
-    - Checked Task
-        - Show Message Task Done
-
-    - Render TaskList
-        - Show All List 
-        - Details About List
+   - Render TaskList
+       - Show All List 
+       - Details About List
       
 ### UI Design Screenshot
