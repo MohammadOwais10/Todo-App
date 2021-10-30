@@ -38,6 +38,6 @@
 <img src="ui-git-desk-lag.PNG">
 
   *  Responsive UI Design
-<img src="ui-git-pad-2-lag.PNG">
+<img src="ui-git-pad-2-lag.png">
 
-<img src="../ui-git-pad-2-lag.PNG">
+![alt text](ui-git-pad-2-lag.png)
