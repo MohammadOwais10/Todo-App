@@ -39,3 +39,5 @@
 
   *  Responsive UI Design
 <img src="ui-git-pad-2-lag.PNG">
+
+<img src="../ui-git-pad-2-lag.PNG">
